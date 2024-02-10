@@ -6,6 +6,6 @@
     "g-ai": "npm:@google/generative-ai"
   },
   "tasks": {
-    "start": "deno run --allow-net --allow-env main.ts"
+    "run": "deno run --allow-net --allow-env main.ts"
   }
 }
