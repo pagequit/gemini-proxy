@@ -1,0 +1,11 @@
+{
+  "imports": {
+    "/": "./",
+    "./": "./",
+    "std/": "https://deno.land/std@0.215.0/",
+    "g-ai": "npm:@google/generative-ai"
+  },
+  "tasks": {
+    "start": "deno run --allow-net --allow-env main.ts"
+  }
+}
