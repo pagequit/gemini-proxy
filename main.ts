@@ -76,8 +76,19 @@ async function hadleRequest(request: Request) {
     body.content,
   );
 
+  let content = "";
+  try {
+    content = response.text();
+  } catch (error) {
+    console.error(error);
+    content = error.message;
+  }
+
   return Response.json(
-    { sessionId: body.sessionId, content: response.text() } satisfies Body,
+    {
+      sessionId: body.sessionId,
+      content,
+    } satisfies Body,
   );
 }
 
