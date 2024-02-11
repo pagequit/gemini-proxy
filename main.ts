@@ -76,12 +76,11 @@ async function hadleRequest(request: Request) {
     body.content,
   );
 
-  let content = "";
+  let content = "An error occurred.";
   try {
     content = response.text();
   } catch (error) {
     console.error(error);
-    content = error.message;
   }
 
   return Response.json(
